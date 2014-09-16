@@ -20,6 +20,7 @@
         "psr/log-implementation": "PSR-3 implemenation"
     },
     "require-dev": {
+        "twig/twig": "~1.16",
         "phpunit/phpunit": "~4.0"
     },
     "autoload": {
