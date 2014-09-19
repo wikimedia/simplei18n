@@ -77,6 +77,19 @@ class MessageTest extends \PHPUnit_Framework_TestCase {
 		);
 	}
 
+	/**
+	 * @covers \Wikimedia\SimpleI18n\Message
+	 */
+	public function testMissingKey() {
+		$ctx = $this->stubI18nContext( array( 'en' => array() ) );
+		$fixture = new Message( 'missing-key', array(), $ctx );
+
+		$this->assertSame( 'missing-key', $fixture->getKey() );
+		$this->assertFalse( $fixture->exists() );
+		$this->assertTrue( $fixture->isBlank() );
+		$this->assertSame( '(missing-key)', $fixture->plain() );
+  }
+
 	protected function stubI18nContext(
 		$messages, $current = 'en', $default = 'en'
 	) {

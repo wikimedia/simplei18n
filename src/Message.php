@@ -70,6 +70,7 @@ class Message {
 		I18nContext $ctx,
 		LoggerInterface $logger = null
 	) {
+		$this->logger = $logger ?: new \Psr\Log\NullLogger();
 		$this->key = $key;
 		$this->params = array_values( $params );
 		$this->ctx = $ctx;
@@ -159,7 +160,7 @@ class Message {
 	public function toString() {
 		$lang = $this->ctx->getCurrentLanguage();
 		if ( $lang === 'qqx' ) {
-			return "({$key})";
+			return "({$this->key})";
 		}
 		$text = $this->fetchMessage();
 		if ( $text === false ) {
@@ -170,7 +171,7 @@ class Message {
 					'key' => $this->key,
 					'lang' => $lang,
 			) );
-			$text = "<{$key}>";
+			$text = "<{$this->key}>";
 		}
 
 		// Replace any $N parameters
