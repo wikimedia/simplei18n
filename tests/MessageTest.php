@@ -87,7 +87,8 @@ class MessageTest extends \PHPUnit_Framework_TestCase {
 		$this->assertSame( 'missing-key', $fixture->getKey() );
 		$this->assertFalse( $fixture->exists() );
 		$this->assertTrue( $fixture->isBlank() );
-		$this->assertSame( '(missing-key)', $fixture->plain() );
+		$this->assertSame( '<missing-key>', $fixture->plain() );
+		$this->assertSame( '&lt;missing-key&gt;', $fixture->escaped() );
   }
 
 	protected function stubI18nContext(
