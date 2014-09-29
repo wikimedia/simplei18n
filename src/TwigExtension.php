@@ -56,6 +56,7 @@ class TwigExtension extends \Twig_Extension {
 	 * <code>
 	 * {{ 'my-message-key'|message }}
 	 * {{ 'my-message-key'|message( 'foo', 'bar' ) }}
+	 * {{ 'my-message-key'|message( [ 'foo', 'bar' ] ) }}
 	 * {{ 'my-message-key'|message( 'foo', 'bar' )|raw }}
 	 * </code>
 	 *
@@ -67,6 +68,10 @@ class TwigExtension extends \Twig_Extension {
 	public function messageFilterCallback( $key /*...*/ ) {
 		$params = func_get_args();
 		array_shift( $params );
+		if ( count( $params ) == 1 && is_array( $params[0] ) ) {
+			// Unwrap args array
+			$params = $params[0];
+		}
 		$msg = $this->ctx->message( $key, $params );
 		return $msg->plain();
 	}

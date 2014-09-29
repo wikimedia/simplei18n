@@ -80,6 +80,12 @@ class TwigExtensionTest extends \PHPUnit_Framework_TestCase {
 			),
 			array(
 				'test-key',
+				'<$1 $2>',
+				array( array( 'something', '$3' ) ),
+				'<something $3>',
+			),
+			array(
+				'test-key',
 				'<$1>',
 				array(),
 				'<$1>',
