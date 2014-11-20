@@ -23,6 +23,21 @@ namespace Wikimedia\SimpleI18n;
 
 /**
  * Integrate SimpleI18n with the Twig template engine.
+ *
+ * Provides a `message` Twig filter that treats the modified variable as
+ * a Message key and returns the plain formatted value of that Message.
+ * Message parameters can be provided as either individual arguments to the
+ * filter or optionally as a single array of argument containing a list of
+ * parameters.
+ *
+ * <code>
+ * {{ 'my-message-key'|message }}
+ * {{ 'my-message-key'|message( 'foo', 'bar' ) }}
+ * {{ 'my-message-key'|message( [ 'foo', 'bar' ] ) }}
+ * {{ 'my-message-key'|message( 'foo', 'bar' )|raw }}
+ * </code>
+ *
+ * @copyright © 2014 Bryan Davis and Wikimedia Foundation
  */
 class TwigExtension extends \Twig_Extension {
 
@@ -75,6 +90,4 @@ class TwigExtension extends \Twig_Extension {
 		$msg = $this->ctx->message( $key, $params );
 		return $msg->plain();
 	}
-
-	// 'foo'|message(p1, p2, p3)
 }

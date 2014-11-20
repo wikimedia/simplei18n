@@ -25,6 +25,8 @@ use Psr\Log\LoggerInterface;
 
 /**
  * Load messages from an array.
+ *
+ * @copyright © 2014 Bryan Davis and Wikimedia Foundation
  */
 class ArrayCache implements MessageCache {
 

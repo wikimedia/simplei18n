@@ -23,6 +23,8 @@ namespace Wikimedia\SimpleI18n;
 
 /**
  * Container for localized messages.
+ *
+ * @copyright © 2014 Bryan Davis and Wikimedia Foundation
  */
 interface MessageCache {
 
