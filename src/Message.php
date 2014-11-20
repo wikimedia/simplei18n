@@ -24,7 +24,13 @@ namespace Wikimedia\SimpleI18n;
 use Psr\Log\LoggerInterface;
 
 /**
- * Interface message.
+ * Localizable message.
+ *
+ * This class can be used to look up a localized message based on a given key
+ * and the active I18nContext language and convert it to a plain or escaped
+ * string.
+ *
+ * @copyright © 2014 Wikimedia Foundation
  */
 class Message {
 
@@ -93,7 +99,7 @@ class Message {
 	/**
 	 * Add parameters to the paramter list of this message.
 	 *
-	 * @param mixed $params,... Parameters as strings of a single argument that
+	 * @param mixed $params,... Parameters as strings or a single argument that
 	 * is an array of strings.
 	 *
 	 * @return Message Self

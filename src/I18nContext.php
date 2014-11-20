@@ -24,7 +24,7 @@ namespace Wikimedia\SimpleI18n;
 use Psr\Log\LoggerInterface;
 
 /**
- * Holds and optionally detects langauge for current request. Also serves as
+ * Holds and optionally detects language for current request. Also serves as
  * a factory for creating Message objects which can be used to subsitute
  * localized message content based on the current language.
  *

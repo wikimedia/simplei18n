@@ -25,6 +25,8 @@ use Psr\Log\LoggerInterface;
 
 /**
  * Load messages from JSON files in a given directory.
+ *
+ * @copyright © 2014 Bryan Davis and Wikimedia Foundation
  */
 class JsonCache extends ArrayCache {
 
