@@ -23,7 +23,7 @@ Wikimedia Simplei18n is available on Packagist
 If you do not use Composer, you can get the source from GitHub and use any
 PSR-4 compatible autoloader.
 
-    $ git clone https://github.com/bd808/wikimedia-simplei18n.git
+    $ git clone https://github.com/wikimedia/simplei18n.git
 
 
 Run the tests
@@ -38,8 +38,8 @@ Tests are automatically performed by [Travis CI][]:
 ---
 [MediaWiki]: https://www.mediawiki.org/wiki/MediaWiki
 [Wikimania Scholarships application]: https://www.mediawiki.org/wiki/Wikimania_Scholarships_app
-[ci-status]: https://travis-ci.org/bd808/wikimedia-simplei18n.png
-[ci-home]: https://travis-ci.org/bd808/wikimedia-simplei18n
+[ci-status]: https://travis-ci.org/wikimedia/simplei18n.png
+[ci-home]: https://travis-ci.org/wikimedia/simplei18n
 [wikimedia/simplei18n]: https://packagist.org/packages/wikimedia/simplei18n
 [Composer]: https://getcomposer.org
 [Travis CI]: https://travis-ci.org
