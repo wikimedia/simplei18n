@@ -28,7 +28,7 @@ PSR-4 compatible autoloader.
 
 Run the tests
 -------------
-This  are automatically performed by [Travis CI][].
+Test are automatically performed by [Travis CI][].
 
     curl -sS https://getcomposer.org/installer | php
     php composer.phar install --dev
